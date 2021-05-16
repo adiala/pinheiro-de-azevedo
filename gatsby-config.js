@@ -5,8 +5,6 @@ module.exports = {
     author: `Adiala`,
   },
 
-  pathPrefix: "/pinheiro-de-azevedo",
-
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
