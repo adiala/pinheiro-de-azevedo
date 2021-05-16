@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import "@fontsource/martel"
-import { GiInjustice, GiHouse } from 'react-icons/gi'
 import Img01 from '../assets/images/image-01.jpg'
 import Img02 from '../assets/images/image-02.jpg'
 import Img03 from '../assets/images/image-03.jpg'
-import Img04 from '../assets/images/image-04.jpg'
+import Img04 from '../assets/images/image-04.png'
 
 const Cards = () => {
 
     return (
         <ProductsContainer>
-            <ProductsHeading>Áreas de Atuação</ProductsHeading>
+            <ProductsHeading>Nossas áreas de atuação</ProductsHeading>
             
             <ProductWrapper>
 
@@ -19,7 +18,6 @@ const Cards = () => {
                     <ImgCard src={Img01} />
                     <ProductInfo>
                     <TextWrap>
-                        <House />
                         <ProductTitle>Direito de Família</ProductTitle>
                     </TextWrap>
                     </ProductInfo>
@@ -29,7 +27,6 @@ const Cards = () => {
                     <ImgCard src={Img02} />
                     <ProductInfo>
                     <TextWrap>
-                        <Court />
                         <ProductTitle>Tribunais Superiores</ProductTitle>
                     </TextWrap>
                     </ProductInfo>
@@ -39,8 +36,7 @@ const Cards = () => {
                     <ImgCard src={Img03} />
                     <ProductInfo>
                     <TextWrap>
-                        <Court />
-                        <ProductTitle>Empresarial</ProductTitle>
+                        <ProductTitle>Consultoria Jurídica Empresarial</ProductTitle>
                     </TextWrap>
                     </ProductInfo>
                 </ProductCard>
@@ -49,7 +45,6 @@ const Cards = () => {
                     <ImgCard src={Img04} />
                     <ProductInfo>
                     <TextWrap>
-                        <Court />
                         <ProductTitle>Poder Legislativo</ProductTitle>
                     </TextWrap>
                     </ProductInfo>
@@ -64,9 +59,9 @@ const Cards = () => {
 export default Cards
 
 const ProductsContainer = styled.div`
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 5rem calc((10vw - 1300px) /2);
-    color: #fff;
+    background-color: #FAFAFA;
 `
 
 const ProductsHeading = styled.div`
@@ -75,13 +70,13 @@ const ProductsHeading = styled.div`
     font-weight: 600;
     text-align: center;
     margin-bottom: 5rem;
-    color: #000;
+    color: rgb(22,40,54);
 `
 
 const ProductWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 60px;
     justify-items: center;
     padding: 0 1rem;
 
@@ -95,8 +90,8 @@ const ProductWrapper = styled.div`
 `
 
 const ProductCard = styled.div`
-    line-height: 2;
-    width: 100%;
+    line-height: 1.5;
+    width: 350px;
     height: 500px;
     position: relative;
     border-radius: 10px;
@@ -113,32 +108,28 @@ const ProductInfo = styled.div`
     }
 `
 const ProductTitle = styled.div`
-    font-size: clamp(1.4rem, 5vw, 1.6rem);
-    margin-top: 5px;
-    margin-left: 0.5rem;
+    font-family: "Martel", serif;
+    color: rgb(22,40,54);
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 1.2rem);
 
 `
 const TextWrap = styled.div`
     display:flex;
     align-items: center;
     position: absolute;
-    top: 430px;
-`
-
-const House = styled(GiHouse)`
-    font-size: clamp(1.2rem, 5vw, 3rem);
-    margin-left: 1rem;
-`
-const Court = styled(GiInjustice)`
-    font-size: clamp(1.2rem, 5vw, 3rem);
-    margin-left: 1rem;
+    margin-top: 8px;
 `
 
 const ImgCard = styled.img`
+    background-size: cover;
+    position: fixed;
     height: 100%;
-    position: relative;
-    overflow: hidden;
     max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;    
     border-radius: 10px;
     filter: brightness(70%);
     transition: 0.4 cubic-bezier(0.075, 0.82, 0.165, 1);

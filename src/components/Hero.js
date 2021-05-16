@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import "@fontsource/martel"
 // import { Button } from './Button'
 import Img from '../assets/images/court.jpg'
 
@@ -11,8 +12,8 @@ const Hero = () => {
           </HeroBg>
           <HeroContent>
               <HeroItems>
-                  <HeroH1>Pinheiro de Azevedo Advogados</HeroH1>
-                  <HeroP>Lorem Ipsum Lorem</HeroP>
+                  <HeroH1>Pinheiro de Azevedo</HeroH1>
+                  <HeroP>ADVOCACIA</HeroP>
                   {/* <Button primary="true" big="true" round="true" to="/contato">Contato</Button> */}
               </HeroItems>
           </HeroContent>  
@@ -23,8 +24,8 @@ const Hero = () => {
 export default Hero
 
 const HeroContainer = styled.div`
-    background: #0c0c0c;
-    color: #fff;
+    background: rgb(22,40,54);
+    color: rgb(215,187,161);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +44,8 @@ const HeroContainer = styled.div`
         z-index: 2;
         background: linear-gradient(
             180deg, 
-            rgba(0,0,0,0.2) 0%,
-            rgba(0,0,0,0.6)100%
+            rgba(22,40,54,0.2) 0%,
+            rgba(22,40,54,0.6)100%
         ),
         linear-gradient(
             180deg, 
@@ -86,7 +87,7 @@ const HeroItems = styled.div`
     height: 100vh;
     max-height: 100%;
     padding: 0;
-    color: #fff;
+    color: rgb(215,187,161);
     line-height: 1.1;
     font-weight: bold;
 
@@ -96,12 +97,14 @@ const HeroH1 = styled.h1`
     font-size: clamp(1.5rem, 6vw, 4rem);
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0 1rem;
+    font-family: "Martel", serif;
 `
 
 const HeroP = styled.p`
     font-size: clamp(1rem, 3vw, 3rem);
     margin-bottom: 2rem;
     font-weight: 400;
+    font-family: "Martel", serif;
 `

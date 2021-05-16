@@ -4,11 +4,15 @@ import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { menuData } from '../data/MenuData'
 import { Button } from "./Button"
+import LogoSm from "../assets/images/logosm.png"
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">PINHEIRO</NavLink>
+      <NavLogo>
+        <NavImg src={LogoSm} />
+      </NavLogo>
+      
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
@@ -18,7 +22,7 @@ const Header = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/contato">Contato</Button>
+        <Button primary="true" to="/contato">Contato</Button>
       </NavBtn>
     </Nav>
   )
@@ -35,17 +39,24 @@ const Nav = styled.nav`
   padding: 0.5rem calc((100vw - 1300px) / 2);
   z-index: 100;
   position: relative;
-  `
+`
+const NavLink = styled(Link)`
+  color: #fff;
+  font-size: 18px;
+  display:flex;
+  align-items: center;
+  text-decoration:none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.3s !important;
 
-  const NavLink = styled(Link)`
-    color: #fff;
-    display:flex;
-    align-items: center;
-    text-decoration:none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-  `
+  &:hover {
+    background: rgb(22,40,54);
+    border-radius: 5px;
+    transform: translateY(-2px);
+  }
+`
   const Bars = styled(FaBars)`
     display: none;
     color: #fff;
@@ -63,7 +74,6 @@ const Nav = styled.nav`
   const NavMenu = styled.div`
     display:flex;
     align-items: center;
-    margin-right: -48px;
 
     @media screen and (max-width: 768px) {
       display: none;
@@ -77,4 +87,14 @@ const Nav = styled.nav`
     @media screen and (max-width: 768px) {
       display:none;
     }
+  `
+  const NavImg = styled.img`
+    position: relative;
+    cursor: pointer;
+  `
+
+  const NavLogo = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
   `
